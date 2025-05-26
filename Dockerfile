@@ -16,3 +16,6 @@ RUN ./Microsoft/scripts/gen_modules_vhdx.sh "$PWD/modules" $(make -s kernelrelea
 
 RUN make clean && rm -r "$PWD/modules"
 
+EXPOSE 8000
+
+CMD ["python", "-m", "http.server", "8000"]
