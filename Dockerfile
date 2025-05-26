@@ -2,7 +2,7 @@ FROM debian:bookworm-slim
 
 RUN apt-get update && apt-get upgrade -y
 
-RUN apt-get install -y --no-install-recommends git build-essential flex bison dwarves libssl-dev libelf-dev cpio qemu-utils python
+RUN apt-get install -y --no-install-recommends git build-essential flex bison dwarves libssl-dev libelf-dev cpio qemu-utils python-is-python3
 
 RUN git clone https://github.com/microsoft/WSL2-Linux-Kernel --depth 1
 RUN cd WSL2-Linux-Kernel
